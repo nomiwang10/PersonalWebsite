@@ -1,40 +1,227 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/webstorm-icon-logo.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WS playground</title>
-  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nomi Wang - Personal Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="public/style.css">
 </head>
-<body>
-<header class="logo">
-  <a href="https://www.jetbrains.com/webstorm/">
-    <img src="/webstorm-logo.svg" alt="WebStorm logo" width="344"
-         height="90">
-  </a>
-</header>
-<main id="app">
-  <h1 class="title">
-    Thank you for trying it out. <br /> Your first project is up and running
-    now.
-  </h1>
-  <section class="counter">
-    <div class="counter-info">
-      <p class="counter-text">Counter is</p>
-      <p class="counter-value" id="counter-value"></p>
+<body class="bg-gray-900 text-gray-200">
+
+<!-- Header & Navigation -->
+<header class="bg-gray-900/80 backdrop-blur-md sticky top-0 z-50">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="#" class="text-2xl font-bold text-white tracking-wider">NW</a>
+    <div class="hidden md:flex items-center space-x-8">
+      <a href="#about" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">About</a>
+      <a href="#projects" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Projects</a>
+      <a href="#skills" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Skills</a>
+      <a href="#contact" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Contact</a>
     </div>
-    <div class="counter-interaction">
-      <button id="increaseByOne" type="button">+1</button>
-      <button id="increaseByTwo" type="button">+2</button>
-      <button id="decreaseByOne" type="button">-1</button>
-      <button id="decreaseByTwo" type="button">-2</button>
+    <a href="#contact" class="hidden md:block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">
+      Hire Me
+    </a>
+    <button id="mobile-menu-button" class="md:hidden text-white">
+      <i data-lucide="menu"></i>
+    </button>
+  </nav>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
+    <a href="#about" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">About</a>
+    <a href="#projects" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">Projects</a>
+    <a href="#skills" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">Skills</a>
+    <a href="#contact" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">Contact</a>
+    <a href="#contact" class="block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg text-center mt-2 transition-colors duration-300">
+      Hire Me
+    </a>
+  </div>
+</header>
+
+<main class="container mx-auto px-6">
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center text-center section-fade-in">
+    <div class="max-w-3xl">
+      <span class="text-indigo-400 font-semibold">Hello, I'm Nomi Wang.</span>
+      <h1 class="text-4xl md:text-6xl font-bold text-white mt-4 mb-6 leading-tight">I like building cool stuff.</h1>
+      <p class="text-lg md:text-xl text-gray-400 mb-8">
+        A passionate electrical engineer who is into system integration and design. I love to transform ideas into beautiful, functional, and user-centric digital or physical products.
+      </p>
+      <div class="flex justify-center space-x-4">
+        <a href="#projects" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 duration-300">
+          View My Work
+        </a>
+        <a href="mailto:zhanghe-wang@uiowa.edu" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 duration-300">
+          Get In Touch
+        </a>
+      </div>
     </div>
   </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 section-fade-in">
+    <h2 class="text-4xl font-bold text-center text-white mb-12">About Me</h2>
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="w-full md:w-1/3">
+        <img src="https://media.licdn.com/dms/image/v2/D5622AQFQOgpwSHCgEw/feedshare-shrink_1280/B56ZanK5VYGsAs-/0/1746561379898?e=1759968000&v=beta&t=3yXi4ltMhWSHyqh7aeWdtSc9ZAJVOgkSAAhxC_cXG48" alt="Nomi Wang" class="rounded-full mx-auto shadow-2xl shadow-indigo-500/20">
+      </div>
+      <div class="w-full md:w-2/3">
+        <p class="text-gray-400 text-lg mb-4">
+          Hello! I'm Nomi, an electrical engineering student who likes to apply what I learned in school to create and engineer cool stuff. My journey into tech started years ago with a fascination when I was learning electromagnetic theory back in high school when I was in Shanghai, China.
+        </p>
+        <p class=" text-gray-400 text-lg mb-4">
+          Later on when I was applying to college I found out Electrical Engineering is the major which I can combine what I am good at(Math & Physics) with something new I want to learn(hardware design and coding).
+        </p>
+        <p class="text-gray-400 text-lg mb-4">
+          I'm interested in embedded systems, hardware design, IoT, and control systems, enjoying the challenge of building a project from the ground up. I thrive on bringing ideas to life and am always eager to learn new technologies and improve my craft.
+        </p>
+        <p class="text-gray-400 text-lg">
+          In my free time, you can find me going to a gym and working out, brewing the perfect cup of coffee, or diving into a good book.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 section-fade-in">
+    <h2 class="text-4xl font-bold text-center text-white mb-12">Featured Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Project 1 -->
+      <div class="bg-gray-800 rounded-xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+        <img src="https://i.imgur.com/Fh5zylG.png" alt="Project 1" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-white mb-2">Synthetic Jet Actuator Project</h3>
+          <p class="text-gray-400 mb-4">A Synthetic Jet Simulator Tablet that generates synthetic jet under different frequencies depending on users' inputs.</p>
+          <p class="text-gray-400 mb-4">Featured in the Departmental Awards and the People's Choice Awards</p>
+          <div class="flex justify-between items-center">
+            <div class="flex space-x-2 text-sm text-indigo-400">
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">C++</span>
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">Arduino</span>
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">ESP32</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://github.com/nomiwang10/nomiwang10/blob/main/Synthetic%20Jet%20Actuator%20Project%20Overview.pdf" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="github"></i></a>
+              <a href="https://engineering.uiowa.edu/research/research-open-house/past-research-open-houses/research-open-house-2025" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="external-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="bg-gray-800 rounded-xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+        <img src="https://i.imgur.com/WZQ4Ecp.png" alt="Project 2" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-white mb-2">Personal Portfolio</h3>
+          <p class="text-gray-400 mb-4">The very site you're looking at! A responsive, modern portfolio built with HTML and Tailwind CSS.</p>
+          <div class="flex justify-between items-center">
+            <div class="flex space-x-2 text-sm text-indigo-400">
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">HTML</span>
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">JS</span>
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">Tailwind</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://github.com/nomiwang10/nomiwang10.github.io/blob/main/index.html" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="github"></i></a>
+              <a href="https://literate-broccoli-x5r794wv54r73v75x-8080.app.github.dev/" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="external-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="bg-gray-800 rounded-xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+        <img src="https://placehold.co/600x400/111827/7C3AED?text=Project+Three" alt="Project 3" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-white mb-2">Drone with Embedded AI camera</h3>
+          <p class="text-gray-400 mb-4">I am building a drone which will move to different directions based on the human hand gesture captured by the embedded camera!</p>
+          <p class="text-gray-400 mb-4">Stay tuned!</p>
+          <div class="flex justify-between items-center">
+            <div class="flex space-x-2 text-sm text-indigo-400">
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">OpenCV</span>
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">Python</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="github"></i></a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="external-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 section-fade-in">
+    <h2 class="text-4xl font-bold text-center text-white mb-12">My Tech Stack</h2>
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-wrap justify-center gap-8">
+        <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg w-32 h-32 justify-center transition-transform transform hover:scale-110 duration-300">
+          <i data-lucide="file-code-2" class="w-12 h-12 text-indigo-400 mb-2"></i>
+          <span class="text-white">C++</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg w-32 h-32 justify-center transition-transform transform hover:scale-110 duration-300">
+          <i data-lucide="coffee" class="w-12 h-12 text-indigo-400 mb-2"></i>
+          <span class="text-white">Java</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg w-32 h-32 justify-center transition-transform transform hover:scale-110 duration-300">
+          <i data-lucide="file-code-2" class="w-12 h-12 text-indigo-400 mb-2"></i>
+          <span class="text-white">Python</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg w-32 h-32 justify-center transition-transform transform hover:scale-110 duration-300">
+          <i data-lucide="cpu" class="w-12 h-12 text-indigo-400 mb-2"></i>
+          <span class="text-white">ESP32</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg w-32 h-32 justify-center transition-transform transform hover:scale-110 duration-300">
+          <i data-lucide="circuit-board" class="w-12 h-12 text-indigo-400 mb-2"></i>
+          <span class="text-white">Arduino</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg w-32 h-32 justify-center transition-transform transform hover:scale-110 duration-300">
+          <i data-lucide="layout-grid" class="w-12 h-12 text-indigo-400 mb-2"></i>
+          <span class="text-white">KiCad</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg w-32 h-32 justify-center transition-transform transform hover:scale-110 duration-300">
+          <i data-lucide="code" class="w-12 h-12 text-indigo-400 mb-2"></i>
+          <span class="text-white">JavaScript</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg w-32 h-32 justify-center transition-transform transform hover:scale-110 duration-300">
+          <i data-lucide="wind" class="w-12 h-12 text-indigo-400 mb-2"></i>
+          <span class="text-white">Tailwind</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg w-32 h-32 justify-center transition-transform transform hover:scale-110 duration-300">
+          <i data-lucide="camera" class="w-12 h-12 text-indigo-400 mb-2"></i>
+          <span class="text-white">OpenCV</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 section-fade-in">
+    <h2 class="text-4xl font-bold text-center text-white mb-4">Get In Touch</h2>
+    <p class="text-lg text-gray-400 text-center max-w-2xl mx-auto mb-12">
+      I'm currently open to new opportunities and collaborations. Feel free to send me a message, and I'll get back to you as soon as possible!
+    </p>
+    <div class="text-center">
+      <a href="mailto:zhanghe-wang@uiowa.edu" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-transform transform hover:scale-105 duration-300">
+        Say Hello
+      </a>
+    </div>
+  </section>
+
 </main>
-<footer class="technologies">
-  <img src="/technologies.svg" alt="List of supported technologies">
+
+<!-- Footer -->
+<footer class="border-t border-gray-800">
+  <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+    <p class="text-gray-500">&copy; 2025 Nomi Wang. All Rights Reserved.</p>
+    <div class="flex space-x-6 mt-4 md:mt-0">
+      <a href="https://github.com/nomiwang10" class="text-gray-500 hover:text-white transition-colors duration-300"><i data-lucide="github" class="w-6 h-6"></i></a>
+      <a href="https://www.linkedin.com/in/zhanghe-wang-31902a28a/" class="text-gray-500 hover:text-white transition-colors duration-300"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+    </div>
+  </div>
 </footer>
-<script type="module" src="/src/main.js"></script>
+<script src="src/main.js"></script>
 </body>
 </html>
