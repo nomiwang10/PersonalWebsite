@@ -1,324 +1,211 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nomi Wang - Personal Portfolio</title>
-
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- FIX: use the root file -->
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="public/style.css">
 </head>
+<body class="bg-gray-900 text-gray-200">
 
-<body class="fun-bg text-slate-900">
 <!-- Header & Navigation -->
-<header class="sticky top-0 z-50 border-b border-white/40 bg-white/60 backdrop-blur-md">
-  <nav class="container mx-auto flex items-center justify-between px-6 py-4">
-    <a href="#home" class="group inline-flex items-center gap-2">
-          <span
-            class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-indigo-500 to-rose-500 text-white shadow-lg shadow-indigo-200"
-          >NW</span
-          >
-      <span class="hidden text-sm font-semibold text-slate-700 group-hover:text-slate-900 sm:block"
-      >Nomi Wang</span
-      >
+<header class="bg-gray-900/80 backdrop-blur-md sticky top-0 z-50">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="#" class="text-2xl font-bold text-white tracking-wider">NW</a>
+    <div class="hidden md:flex items-center space-x-8">
+      <a href="#about" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">About</a>
+      <a href="#projects" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Projects</a>
+      <a href="#resume" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Resume</a>
+      <a href="#contact" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Contact</a>
+    </div>
+    <a href="./resume.pdf" target="_blank" rel="noopener" class="hidden md:block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">
+      Resume
     </a>
-
-    <div class="hidden items-center space-x-8 md:flex">
-      <a href="#about" class="navlink">About</a>
-      <a href="#projects" class="navlink">Projects</a>
-      <a href="#updates" class="navlink">Updates</a>
-      <a href="#skills" class="navlink">Skills</a>
-      <a href="#contact" class="navlink">Contact</a>
-    </div>
-
-    <div class="hidden md:block">
-      <a
-        href="#contact"
-        class="rounded-xl bg-slate-900 px-4 py-2 font-medium text-white shadow-lg shadow-slate-200 transition hover:-translate-y-0.5 hover:bg-slate-800"
-      >
-        Let’s build ⚡
-      </a>
-    </div>
-
-    <button id="mobile-menu-button" class="md:hidden" aria-label="Open menu">
-          <span class="rounded-xl bg-white/70 p-2 shadow-sm">
-            <i data-lucide="menu"></i>
-          </span>
+    <button id="mobile-menu-button" class="md:hidden text-white">
+      <i data-lucide="menu"></i>
     </button>
   </nav>
-
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden px-6 pb-4 md:hidden">
-    <div class="glass-card space-y-2 p-4">
-      <a href="#about" class="block navlink">About</a>
-      <a href="#projects" class="block navlink">Projects</a>
-      <a href="#updates" class="block navlink">Updates</a>
-      <a href="#skills" class="block navlink">Skills</a>
-      <a href="#contact" class="block navlink">Contact</a>
-      <a
-        href="#contact"
-        class="mt-2 block rounded-xl bg-slate-900 px-4 py-2 text-center font-medium text-white"
-      >
-        Let’s build ⚡
-      </a>
-    </div>
+  <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
+    <a href="#about" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">About</a>
+    <a href="#projects" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">Projects</a>
+    <a href="#resume" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">Resume</a>
+    <a href="#contact" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300">Contact</a>
+    <a href="#contact" class="block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg text-center mt-2 transition-colors duration-300">
+      Hire Me
+    </a>
   </div>
 </header>
 
 <main class="container mx-auto px-6">
-  <!-- Hero -->
-  <section id="home" class="section-fade-in flex min-h-[92vh] items-center justify-center text-center">
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center text-center section-fade-in">
     <div class="max-w-3xl">
-      <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm shadow-sm">
-        <span class="emoji-bounce">🧠</span>
-        <span class="text-slate-700">Electrical Engineering • Embedded • Controls</span>
-      </div>
-
-      <h1 class="mb-5 text-4xl font-bold leading-tight text-slate-900 md:text-6xl">
-        I build cool stuff —<br />
-        <span class="gradient-text">from circuits to software.</span>
-      </h1>
-
-      <p class="mx-auto mb-8 max-w-2xl text-lg text-slate-700 md:text-xl">
-        I’m Nomi Wang. I like turning ideas into real projects: embedded systems, hardware design, IoT, and control.
+      <span class="text-indigo-400 font-semibold">Hello, I'm Nomi Wang.</span>
+      <h1 class="text-4xl md:text-6xl font-bold text-white mt-4 mb-6 leading-tight">I like building cool stuff.</h1>
+      <p class="text-lg md:text-xl text-gray-400 mb-8">
+        A passionate electrical engineer who is into system integration and design. I love to transform ideas into beautiful, functional, and user-centric digital or physical products.
       </p>
-
-      <div class="flex flex-wrap justify-center gap-3">
-        <a href="#projects" class="btn-primary">
-          View My Work <i data-lucide="arrow-right" class="ml-2 inline-block h-5 w-5"></i>
+      <div class="flex justify-center space-x-4">
+        <a href="#projects" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 duration-300">
+          View My Work
         </a>
-        <a href="mailto:zhanghe-wang@uiowa.edu" class="btn-secondary">
-          Email Me <i data-lucide="mail" class="ml-2 inline-block h-5 w-5"></i>
+        <a href="mailto:zhanghe-wang@uiowa.edu" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 duration-300">
+          Get In Touch
         </a>
-      </div>
-
-      <div class="mt-10 flex flex-wrap justify-center gap-2 text-sm text-slate-600">
-        <span class="chip">⚡ Embedded</span>
-        <span class="chip">🌀 Fluids + PIV</span>
-        <span class="chip">🧩 Systems Integration</span>
-        <span class="chip">☕ Coffee-powered</span>
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="section-fade-in py-16 md:py-20">
-    <h2 class="mb-10 text-center text-4xl font-bold text-slate-900">About Me</h2>
-
-    <div class="grid gap-10 md:grid-cols-3 md:items-center">
-      <div class="md:col-span-1">
-        <!-- Tip: replace with a local image later (e.g. ./headshot.jpg). -->
-        <div class="glass-card p-4">
-          <img
-            src="https://media.licdn.com/dms/image/v2/D5622AQFQOgpwSHCgEw/feedshare-shrink_1280/B56ZanK5VYGsAs-/0/1746561379898?e=1759968000&v=beta&t=3yXi4ltMhWSHyqh7aeWdtSc9ZAJVOgkSAAhxC_cXG48"
-            alt="Nomi Wang"
-            class="mx-auto aspect-square w-56 rounded-3xl object-cover shadow-xl shadow-indigo-200"
-            onerror="this.onerror=null;this.src='https://placehold.co/600x600/png?text=Nomi+Wang';"
-          />
-          <div class="mt-4 text-center">
-            <p class="font-semibold text-slate-900">Nomi Wang</p>
-            <p class="text-sm text-slate-600">Electrical Engineering Student</p>
-          </div>
-        </div>
+  <!-- About Section -->
+  <section id="about" class="py-20 section-fade-in">
+    <h2 class="text-4xl font-bold text-center text-white mb-12">About Me</h2>
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="w-full md:w-1/3">
+        <img src="https://media.licdn.com/dms/image/v2/D5622AQFQOgpwSHCgEw/feedshare-shrink_1280/B56ZanK5VYGsAs-/0/1746561379898?e=1759968000&v=beta&t=3yXi4ltMhWSHyqh7aeWdtSc9ZAJVOgkSAAhxC_cXG48" alt="Nomi Wang" class="rounded-full mx-auto shadow-2xl shadow-indigo-500/20">
       </div>
-
-      <div class="md:col-span-2">
-        <div class="glass-card p-6 md:p-8">
-          <p class="mb-4 text-lg text-slate-700">
-            Hello! I'm Nomi, an electrical engineering student who likes to apply what I learned in school to create and
-            engineer cool stuff. My journey into tech started years ago with a fascination for electromagnetic theory back in
-            high school in Shanghai, China.
-          </p>
-          <p class="mb-4 text-lg text-slate-700">
-            Later on, I realized EE lets me combine what I’m good at (Math & Physics) with what I want to learn next (hardware
-            design and coding).
-          </p>
-          <p class="mb-4 text-lg text-slate-700">
-            I’m into embedded systems, hardware design, IoT, and control systems — and I love building projects from the
-            ground up.
-          </p>
-          <p class="text-lg text-slate-700">
-            In my free time: gym, coffee experiments, and a good book.
-          </p>
-
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="chip">University of Iowa</span>
-            <span class="chip">Embedded + Controls</span>
-            <span class="chip">Builder mindset</span>
-          </div>
-        </div>
+      <div class="w-full md:w-2/3">
+        <p class="text-gray-400 text-lg mb-4">
+          Hello! I'm Nomi, an electrical engineering student who likes to apply what I learned in school to create and engineer cool stuff. My journey into tech started years ago with a fascination when I was learning electromagnetic theory back in high school when I was in Shanghai, China.
+        </p>
+        <p class=" text-gray-400 text-lg mb-4">
+          Later on when I was applying to college I found out Electrical Engineering is the major which I can combine what I am good at(Math & Physics) with something new I want to learn(hardware design and coding).
+        </p>
+        <p class="text-gray-400 text-lg mb-4">
+          I'm interested in embedded systems, hardware design, IoT, and control systems, enjoying the challenge of building a project from the ground up. I thrive on bringing ideas to life and am always eager to learn new technologies and improve my craft.
+        </p>
+        <p class="text-gray-400 text-lg">
+          In my free time, you can find me going to a gym and working out, brewing the perfect cup of coffee, or diving into a good book.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="section-fade-in py-16 md:py-20">
-    <div class="mx-auto mb-10 max-w-3xl text-center">
-      <h2 class="text-4xl font-bold text-slate-900">Featured Projects</h2>
-      <p class="mt-3 text-lg text-slate-700">
-        A few things I’ve built (and I’m actively improving). More coming soon.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 section-fade-in">
+    <h2 class="text-4xl font-bold text-center text-white mb-12">Featured Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Project 1 -->
-      <article class="glass-card overflow-hidden">
-        <img src="https://i.imgur.com/Fh5zylG.png" alt="Synthetic Jet" class="h-48 w-full object-cover" />
+      <div class="bg-gray-800 rounded-xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+        <img src="https://i.imgur.com/Fh5zylG.png" alt="Project 1" class="w-full h-48 object-cover">
         <div class="p-6">
-          <div class="mb-3 flex items-center justify-between">
-            <h3 class="text-2xl font-bold text-slate-900">Synthetic Jet Actuator</h3>
-            <span class="status-pill">🏆 Featured</span>
-          </div>
-          <p class="mb-4 text-slate-700">
-            A simulator tablet that generates synthetic jets at different frequencies based on user input.
-          </p>
-          <p class="mb-4 text-slate-700">Featured in departmental awards + People’s Choice.</p>
-
-          <div class="flex flex-wrap gap-2">
-            <span class="chip">C++</span>
-            <span class="chip">Arduino</span>
-            <span class="chip">ESP32</span>
-          </div>
-
-          <div class="mt-5 flex items-center justify-between">
-            <div class="flex gap-4">
-              <a href="https://github.com/nomiwang10/nomiwang10/blob/main/Synthetic%20Jet%20Actuator%20Project%20Overview.pdf" class="iconlink">
-                <i data-lucide="github"></i>
-              </a>
-              <a href="https://engineering.uiowa.edu/research/research-open-house/past-research-open-houses/research-open-house-2025" class="iconlink">
-                <i data-lucide="external-link"></i>
-              </a>
+          <h3 class="text-2xl font-bold text-white mb-2">Synthetic Jet Actuator Project</h3>
+          <p class="text-gray-400 mb-4">A Synthetic Jet Simulator Tablet that generates synthetic jet under different frequencies depending on users' inputs.</p>
+          <p class="text-gray-400 mb-4">Featured in the Departmental Awards and the People's Choice Awards</p>
+          <div class="flex justify-between items-center">
+            <div class="flex space-x-2 text-sm text-indigo-400">
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">C++</span>
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">Arduino</span>
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">ESP32</span>
             </div>
-            <a href="#updates" class="text-sm font-semibold text-indigo-600 hover:text-indigo-700">See updates →</a>
+            <div class="flex space-x-4">
+              <a href="https://github.com/nomiwang10/nomiwang10/blob/main/Synthetic%20Jet%20Actuator%20Project%20Overview.pdf" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="github"></i></a>
+              <a href="https://engineering.uiowa.edu/research/research-open-house/past-research-open-houses/research-open-house-2025" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="external-link"></i></a>
+            </div>
           </div>
         </div>
-      </article>
-
+      </div>
       <!-- Project 2 -->
-      <article class="glass-card overflow-hidden">
-        <img src="https://i.imgur.com/WZQ4Ecp.png" alt="Portfolio" class="h-48 w-full object-cover" />
+      <div class="bg-gray-800 rounded-xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+        <img src="https://i.imgur.com/WZQ4Ecp.png" alt="Project 2" class="w-full h-48 object-cover">
         <div class="p-6">
-          <div class="mb-3 flex items-center justify-between">
-            <h3 class="text-2xl font-bold text-slate-900">Personal Portfolio</h3>
-            <span class="status-pill">✨ Live</span>
-          </div>
-          <p class="mb-4 text-slate-700">
-            The very site you’re looking at — responsive, modern, and constantly evolving.
-          </p>
-
-          <div class="flex flex-wrap gap-2">
-            <span class="chip">HTML</span>
-            <span class="chip">JS</span>
-            <span class="chip">Tailwind</span>
-          </div>
-
-          <div class="mt-5 flex gap-4">
-            <a href="https://github.com/nomiwang10/PersonalWebsite" class="iconlink"><i data-lucide="github"></i></a>
-            <a href="https://nomiwang10.github.io/PersonalWebsite/" class="iconlink"><i data-lucide="external-link"></i></a>
+          <h3 class="text-2xl font-bold text-white mb-2">Personal Portfolio</h3>
+          <p class="text-gray-400 mb-4">The very site you're looking at! A responsive, modern portfolio built with HTML and Tailwind CSS.</p>
+          <div class="flex justify-between items-center">
+            <div class="flex space-x-2 text-sm text-indigo-400">
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">HTML</span>
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">JS</span>
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">Tailwind</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://github.com/nomiwang10/PersonalWebsite" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="github"></i></a>
+              <a href="https://nomiwang10.github.io/PersonalWebsite/" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="external-link"></i></a>
+            </div>
           </div>
         </div>
-      </article>
-
+      </div>
       <!-- Project 3 -->
-      <article class="glass-card overflow-hidden">
-        <img src="https://placehold.co/600x400/png?text=In+Progress" alt="Drone AI" class="h-48 w-full object-cover" />
+      <div class="bg-gray-800 rounded-xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+        <img src="https://placehold.co/600x400/111827/7C3AED?text=Project+Three" alt="Project 3" class="w-full h-48 object-cover">
         <div class="p-6">
-          <div class="mb-3 flex items-center justify-between">
-            <h3 class="text-2xl font-bold text-slate-900">Drone + Embedded AI Camera</h3>
-            <span class="status-pill">🛠️ In progress</span>
-          </div>
-          <p class="mb-4 text-slate-700">
-            A drone that responds to human hand gestures captured by an embedded camera.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="chip">OpenCV</span>
-            <span class="chip">Python</span>
-          </div>
-          <div class="mt-5 flex gap-4 opacity-60">
-            <span class="text-sm text-slate-600">Links coming soon</span>
+          <h3 class="text-2xl font-bold text-white mb-2">Drone with Embedded AI camera</h3>
+          <p class="text-gray-400 mb-4">I am building a drone which will move to different directions based on the human hand gesture captured by the embedded camera!</p>
+          <p class="text-gray-400 mb-4">Stay tuned!</p>
+          <div class="flex justify-between items-center">
+            <div class="flex space-x-2 text-sm text-indigo-400">
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">OpenCV</span>
+              <span class="bg-indigo-900/50 px-2 py-1 rounded">Python</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="github"></i></a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="external-link"></i></a>
+            </div>
           </div>
         </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Updates -->
-  <section id="updates" class="section-fade-in py-16 md:py-20">
-    <div class="mx-auto mb-10 max-w-3xl text-center">
-      <h2 class="text-4xl font-bold text-slate-900">Latest Updates</h2>
-      <p class="mt-3 text-lg text-slate-700">
-        Small progress logs so people can see what I’m actively building.
-      </p>
-    </div>
-
-    <!-- JS renders cards here -->
-    <div id="updates-list" class="mx-auto grid max-w-4xl gap-6"></div>
-
-    <div class="mt-10 text-center">
-      <p class="text-sm text-slate-600">
-        Want this to be even easier? Next step is moving updates into a JSON file.
-      </p>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section-fade-in py-16 md:py-20">
-    <h2 class="mb-10 text-center text-4xl font-bold text-slate-900">My Tech Stack</h2>
-
-    <div class="mx-auto max-w-5xl">
-      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
-        <div class="skill-tile"><i data-lucide="file-code-2"></i><span>C++</span></div>
-        <div class="skill-tile"><i data-lucide="coffee"></i><span>Java</span></div>
-        <div class="skill-tile"><i data-lucide="file-code-2"></i><span>Python</span></div>
-        <div class="skill-tile"><i data-lucide="cpu"></i><span>ESP32</span></div>
-        <div class="skill-tile"><i data-lucide="circuit-board"></i><span>Arduino</span></div>
-        <div class="skill-tile"><i data-lucide="layout-grid"></i><span>KiCad</span></div>
-        <div class="skill-tile"><i data-lucide="code"></i><span>JavaScript</span></div>
-        <div class="skill-tile"><i data-lucide="wind"></i><span>Tailwind</span></div>
-        <div class="skill-tile"><i data-lucide="camera"></i><span>OpenCV</span></div>
-        <div class="skill-tile"><i data-lucide="settings"></i><span>Controls</span></div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section-fade-in py-16 md:py-20">
-    <div class="mx-auto max-w-3xl text-center">
-      <h2 class="mb-4 text-4xl font-bold text-slate-900">Get In Touch</h2>
-      <p class="mb-10 text-lg text-slate-700">
-        Open to opportunities and collaborations — send me a message and I’ll get back to you.
-      </p>
+  <!-- Skills Section -->
+  <section id="resume" class="py-20 section-fade-in">
+    <h2 class="text-4xl font-bold text-center text-white mb-12">Resume</h2>
 
-      <a href="mailto:zhanghe-wang@uiowa.edu" class="btn-primary">
-        Say Hello <i data-lucide="send" class="ml-2 inline-block h-5 w-5"></i>
+    <div class="max-w-3xl mx-auto text-center px-6">
+      <div class="bg-gray-800/60 border border-gray-700 rounded-2xl p-8">
+        <p class="text-gray-300 text-lg leading-relaxed mb-8">
+          Here’s my latest resume in PDF format. You can view it in a new tab or download it.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="./resume.pdf" target="_blank" rel="noopener"
+             class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 inline-flex items-center">
+            View Resume <i data-lucide="external-link" class="w-5 h-5 ml-2"></i>
+          </a>
+
+          <a href="./resume.pdf" download
+             class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 inline-flex items-center">
+            Download PDF <i data-lucide="download" class="w-5 h-5 ml-2"></i>
+          </a>
+        </div>
+
+        <p class="text-xs text-gray-400 mt-6">
+          Tip: Put <span class="font-mono">resume.pdf</span> in your repo root (same level as <span class="font-mono">index.html</span>).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 section-fade-in">
+    <h2 class="text-4xl font-bold text-center text-white mb-4">Get In Touch</h2>
+    <p class="text-lg text-gray-400 text-center max-w-2xl mx-auto mb-12">
+      I'm currently open to new opportunities and collaborations. Feel free to send me a message, and I'll get back to you as soon as possible!
+    </p>
+    <div class="text-center">
+      <a href="mailto:zhanghe-wang@uiowa.edu" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-transform transform hover:scale-105 duration-300">
+        Say Hello
       </a>
     </div>
   </section>
+
 </main>
 
 <!-- Footer -->
-<footer class="mt-10 border-t border-white/40 bg-white/50">
-  <div class="container mx-auto flex flex-col items-center justify-between gap-4 px-6 py-8 text-center md:flex-row md:text-left">
-    <p class="text-slate-600">&copy; 2025 Nomi Wang. All Rights Reserved.</p>
-    <div class="flex space-x-6">
-      <a href="https://github.com/nomiwang10" class="iconlink"><i data-lucide="github" class="h-6 w-6"></i></a>
-      <a href="https://www.linkedin.com/in/zhanghe-wang-31902a28a/" class="iconlink"><i data-lucide="linkedin" class="h-6 w-6"></i></a>
+<footer class="border-t border-gray-800">
+  <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+    <p class="text-gray-500">&copy; 2025 Nomi Wang. All Rights Reserved.</p>
+    <div class="flex space-x-6 mt-4 md:mt-0">
+      <a href="https://github.com/nomiwang10" class="text-gray-500 hover:text-white transition-colors duration-300"><i data-lucide="github" class="w-6 h-6"></i></a>
+      <a href="https://www.linkedin.com/in/zhanghe-wang-31902a28a/" class="text-gray-500 hover:text-white transition-colors duration-300"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
     </div>
   </div>
 </footer>
-
-<!-- FIX: use the root file -->
-<script src="./main.js"></script>
+<script src="src/main.js"></script>
 </body>
 </html>
